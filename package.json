@@ -28,7 +28,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start_node": "nodemon index.js",
+    "start_dev_node": "nodemon index.js",
+    "start_node": "node index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
