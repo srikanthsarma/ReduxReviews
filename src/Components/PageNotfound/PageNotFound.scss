@@ -1,0 +1,11 @@
+@import url('../../Common/colors.scss');
+
+.PageNotFound {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 50%;
+        margin: 3rem;
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../Common/colors.scss';
+
+.MovieDetails {
+    display: flex;
+    flex-wrap: nowrap;
+
+    line-height: 1.75rem;
+    text-justify: distribute-all-lines;
+
+    h1 {
+        margin: 0.75rem 0rem;
+        color: $font-s;
+    }
+
+    .ratings {
+        span {
+            margin: 0.35rem;
+        }
+
+        .film {
+            color: lightgrey;
+        }
+
+        .thumbsup {
+            color: lightblue;
+        }
+
+        .star {
+            color: lightgoldenrodyellow;
+        }
+    }
+
+    img {
+        padding: 2rem;
+    }
+
+    .textDetails {
+        padding: 2rem;
+    }
+
+
+}
+
+.Loading {
+    text-align: center;
+
+    h1 {
+        margin-top: auto;
+    }
+}

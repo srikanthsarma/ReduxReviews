@@ -1,0 +1,28 @@
+@import '../../Common/colors.scss';
+
+
+.HomeContainer {
+    padding: 1rem;
+
+    h3 {
+        color: $font-s;
+    }
+}
+
+.MoviesContainer {
+    padding: 0.5rem;
+}
+
+.ShowsContainer {
+    padding: 0.5rem;
+}
+
+
+.CardContainer {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+
+    margin: 0.5rem;
+    padding: 0.5rem;
+}

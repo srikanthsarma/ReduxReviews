@@ -1,0 +1,14 @@
+@import '../../Common/colors.scss';
+
+.Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 15vh;
+    height: 15dvh;
+
+
+    background-color: $secondry-color;
+    color: $font-p;
+}

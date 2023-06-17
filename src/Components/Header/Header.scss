@@ -1,0 +1,80 @@
+@import '../../Common/colors.scss';
+
+.Header {
+    background-color: $secondry-color;
+    color: $font-p;
+
+    height: 15vh;
+    height: 15dvh;
+    padding-inline: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .Logo {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: $font-p;
+    }
+
+    .headerContents {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15rem;
+
+
+        .SearchBar {
+            width: 40%;
+            color: $font-p;
+
+
+            input {
+                width: 95%;
+                padding: 0.5rem;
+                background: none;
+                border: none;
+                color: $font-p;
+                border-bottom: 0.1rem solid gray;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            button {
+                width: 5%;
+                background: none;
+                border: none;
+                color: white;
+            }
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 2.5rem;
+            }
+
+            button {
+                width: 5rem;
+                background: none;
+                border: 1px solid white;
+                border-radius: 0.5rem;
+                color: white;
+
+                &:hover {
+                    background-color: aliceblue;
+                    color: black;
+                }
+            }
+        }
+    }
+}

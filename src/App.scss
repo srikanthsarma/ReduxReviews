@@ -1,0 +1,36 @@
+@import './Common/colors.scss';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 100ms ease-in-out;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+button,
+input,
+form,
+label {
+    font: inherit;
+}
+
+body {
+    background-color: $primary-color;
+    color: $font-p;
+
+    a {
+        color: $font-p;
+        text-decoration: none;
+    }
+
+}
+
+.container {
+    min-height: 70vh;
+    min-height: 70dvh;
+}
