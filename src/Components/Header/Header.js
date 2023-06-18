@@ -61,7 +61,7 @@ function Header() {
                 </form>
             </div>
             <div className='user'>
-                <button onClick={userSignOut}>Sign Out</button>
+                <button onClick={userSignOut}>SIGN OUT</button>
                 <img id='user-img' src={user} alt='user' />
             </div>
         </div >

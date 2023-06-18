@@ -2,7 +2,9 @@
 
 .MovieCard {
     background-color: $secondry-color;
-    min-height: 25rem;
+    min-height: 15rem;
+    max-height: 25rem;
+    max-width: 35rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
 
@@ -23,17 +25,21 @@
             margin: auto;
         }
     }
-    
+
     .CardTitle {
         width: 100%;
-        height: calc( 20% - 0.5rem);
+        height: calc(20% - 1rem);
         margin-inline: auto;
-        margin-top: 0.5rem;
-                
+        margin-top: 1rem;
         color: $font-p;
-        // h4, p {
-        //     position: absolute;
-        //     bottom: 0;
-        // }
+
+        h4, span {
+            font-size: 1rem;
+        }
+        span {
+            font-style:italic;
+            color: $accent;
+        }
+
     }
 }
