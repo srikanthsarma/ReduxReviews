@@ -2,49 +2,135 @@
 
 .MovieDetails {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 2rem;
 
-    line-height: 1.75rem;
-    text-justify: distribute-all-lines;
+    line-height: 1.5rem;
 
-    h1 {
-        margin: 0.75rem 0rem;
-        color: $font-s;
-    }
-
-    .ratings {
-        span {
-            margin: 0.35rem;
-        }
-
-        .film {
-            color: lightgrey;
-        }
-
-        .thumbsup {
-            color: lightblue;
-        }
-
-        .star {
-            color: lightgoldenrodyellow;
-        }
-    }
-
-    img {
-        padding: 2rem;
-    }
 
     .textDetails {
         padding: 2rem;
+
+        h1 {
+            margin: 1rem 0rem;
+            color: $font-s;
+        }
+
+        h5 {
+            font-size: 1.15rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        h5>span {
+
+            font-weight: 700;
+            color: $accent;
+        }
+
+        .ratings {
+            margin-block: 1rem;
+
+            span {
+                margin-right: 0.5rem;
+                color: $font-p
+            }
+
+            .film {
+                color: rgb(169, 169, 169);
+            }
+
+            .thumbsup {
+                color: rgb(120, 195, 220);
+            }
+
+            .star {
+                color: rgb(253, 253, 168);
+            }
+        }
     }
 
 
 }
 
 .Loading {
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30rem;
 
     h1 {
-        margin-top: auto;
+        margin: auto;
     }
+}
+
+@media screen and (max-width: 1200px) {
+    .MovieDetails {
+        .poster {
+            img {
+                transform: translate(0, -8rem);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .MovieDetails {
+        flex-wrap: wrap;
+        line-height: 1.75rem;
+
+        .poster {
+            img {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .MovieDetails {
+        
+        .textDetails {
+            padding: 1rem;
+
+            h1 {
+                margin: 0.5rem 0rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .ratings {
+                margin-block: 0.5rem;
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .MovieDetails {
+        
+        font-size: 0.75rem;
+
+        line-height: 1.15rem;
+        font-size: 0.5rem;
+
+
+        .poster {
+            img {
+                width: 60vw;
+            }
+        }
+    }
+
 }

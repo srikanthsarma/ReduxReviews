@@ -23,8 +23,9 @@ function MovieDetails() {
     let showDetails;
     showDetails = (details.Response === "True") ? (
         <div className='MovieDetails'>
+            <div className='poster'>
             <img src={details.Poster} alt={details.Title} ></img>
-
+            </div>
             <div className='textDetails'>
                 <h1>{details.Title}</h1>
                 <div className='ratings'>
@@ -32,7 +33,7 @@ function MovieDetails() {
                     <span>{icon_thumbsup} {details.imdbVotes} </span>
                     <span>{icon_star} {details.imdbRating} </span>
                 </div>
-                <h3>{details.Released}</h3>
+                <h5>Released on <span>{details.Released}</span></h5>
                 <p>{details.Plot}</p>
                 <br />
                 <p>Genres : {details.Genre}</p>
@@ -43,7 +44,6 @@ function MovieDetails() {
                 <p>Writer : {details.Writer}</p>
                 <p>Awards : {details.Awards} </p>
             </div>
-
         </div>
     )
         : (
@@ -52,7 +52,7 @@ function MovieDetails() {
         )
 
     return (
-        <div >
+        <div className='movieDetailContainer' >
             {showDetails}
         </div>
     )

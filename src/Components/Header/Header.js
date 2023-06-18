@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './Header.scss';
 import user from '../../Images/user.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { icon_search } from '../../Common/icons';
-import { asyncFetchMovies, asyncFetchShows, setSearchTerm } from '../../Features/Movies/MoviesSlice';
+import { asyncFetchMovies, asyncFetchShows, setSearchTerm, removeUserName } from '../../Features/Movies/MoviesSlice';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../FirebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth'
@@ -28,6 +28,7 @@ function Header() {
     const userSignOut = () => {
         signOut(auth).then(() => {
             navigate('/Home')
+            dispatch(removeUserName());
         })
             .catch((error) => {
                 console.error(error);
@@ -47,6 +48,7 @@ function Header() {
         (userAuth) ? < div className='headerContents'>
             <div className='SearchBar'>
                 <form className='SearchForm' onSubmit={handleSearch}>
+                    <button type='submit' className='SearchIcon'>{icon_search}</button>
                     <input
                         className='SearchInput'
                         type='text'
@@ -55,12 +57,12 @@ function Header() {
                         onChange={e => setsearchText(e.target.value)}
                         required
                     ></input>
-                    <button type='submit' className='SearchIcon'>{icon_search}</button>
+
                 </form>
             </div>
             <div className='user'>
-                <img src={user} alt='user' />
                 <button onClick={userSignOut}>Sign Out</button>
+                <img id='user-img' src={user} alt='user' />
             </div>
         </div >
             : null

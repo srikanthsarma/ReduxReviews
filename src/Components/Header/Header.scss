@@ -4,8 +4,8 @@
     background-color: $secondry-color;
     color: $font-p;
 
-    height: 15vh;
-    height: 15dvh;
+    min-height: 20vh;
+    min-height: 20dvh;
     padding-inline: 2rem;
 
     display: flex;
@@ -16,65 +16,119 @@
         font-size: 2.5rem;
         font-weight: 600;
         color: $font-p;
+        margin-inline: 1rem;
     }
 
     .headerContents {
         display: flex;
-        width: 100%;
+        width: 70%;
         align-items: center;
         justify-content: flex-end;
-        gap: 15rem;
 
 
         .SearchBar {
-            width: 40%;
+            width: 30%;
             color: $font-p;
+            position: relative;
 
 
             input {
-                width: 95%;
-                padding: 0.5rem;
+                width: 80%;
+                padding: 0.5rem 2rem;
                 background: none;
                 border: none;
                 color: $font-p;
-                border-bottom: 0.1rem solid gray;
-
-                &:focus-visible {
-                    outline: none;
-                }
+                border-bottom: 0.15rem solid $font-p;
             }
 
             button {
-                width: 5%;
+                position: absolute;
+                left: 0rem;
+                top: 0.5rem;
                 background: none;
                 border: none;
-                color: white;
+                color: $font-s;
             }
         }
 
         .user {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            flex-direction: row;
             align-items: center;
-            gap: 1rem;
+            margin-inline: 1rem;
 
-            img {
-                width: 2.5rem;
-            }
 
             button {
                 width: 5rem;
+                height: 2.5rem;
+                margin-inline: 1rem;
                 background: none;
                 border: 1px solid white;
-                border-radius: 0.5rem;
+                border-radius: 0.25rem;
                 color: white;
 
                 &:hover {
                     background-color: aliceblue;
                     color: black;
                 }
+
+            }
+
+            img {
+
+                width: 3rem;
             }
         }
     }
 }
+
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 800px) {
+    .Header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        .headerContents {
+            width: 90%;
+            justify-content: space-evenly;
+
+            .SearchBar {
+                width: 100%;
+
+                input {
+                    width: 80%;
+                    padding: 0.25rem 1.5rem;
+                }
+
+                button {
+                    left: 0rem;
+                    top: 0.25rem;
+                }
+
+            }
+
+            .user {
+                font-size: .5rem;
+
+                button {
+                    width: 3rem;
+                    height: 2rem;
+                    margin-right: -2rem;
+                }
+
+                img {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {}
+
+@media screen and (max-width: 300px) {}

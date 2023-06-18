@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import NodeAPI from '../../../src/Common/APIs/MovieAPI';
 
 const initialState = {
+    userName: '',
     movies: [],
     shows: [],
     details: [],
@@ -31,6 +32,12 @@ const movieSlice = createSlice(
         name: "movies",
         initialState,
         reducers: {
+            addUserName: (state, action) => {
+                state.userName = action.payload;
+            },
+            removeUserName: (state) => {
+                state.userName = '';
+            },
             removeMovies: (state) => {
                 state.details = [];
             },
@@ -54,9 +61,10 @@ const movieSlice = createSlice(
     },
 );
 
-export const { removeMovies, setSearchTerm } = movieSlice.actions;
+export const { removeMovies, setSearchTerm, addUserName, removeUserName } = movieSlice.actions;
 export default movieSlice.reducer;
 export const getAllMovies = (state) => state.movies.movies;
 export const getAllShows = (state) => state.movies.shows;
 export const getAllDetails = (state) => state.movies.details;
 export const getSearchTerm = (state) => state.movies.searchText;
+export const getUserName = (state) => state.movies.userName;

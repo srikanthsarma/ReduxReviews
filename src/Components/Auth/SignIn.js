@@ -23,8 +23,8 @@ function SignIn() {
 
   return (
     <div className='SignInPageContainer' >
+        <h1><span>LOG</span>IN</h1>
       <form onSubmit={handleSignIn} className='SignInPage'>
-        <h1>Log In</h1>
         <input
           type='email'
           placeholder='Email'
@@ -43,7 +43,7 @@ function SignIn() {
         ></input>
         <button type='submit'>LOGIN</button>
       </form>
-      <div>Don't have an account? <Link to='/signup'>SIGN UP</Link></div>
+      <div className='signup'>Don't have an account? <Link className='signup link' to='/signup'>SIGN UP</Link></div>
     </div>
   )
 }

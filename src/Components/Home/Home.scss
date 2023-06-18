@@ -1,2 +1,31 @@
 @import '../../Common/colors.scss';
 
+.Home {
+  
+    .welcome {
+
+        color: $accent;
+        h3 {
+            margin-top: 0.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        span {
+            color: $font-p;
+        }
+        
+        p {
+            margin: 0.5rem 2rem;
+            font-size: 1rem;
+            
+            span {
+                color:$font-s;
+                font-size: 1.25rem;
+                font-weight: 400;
+
+            }
+        }
+    }
+
+}
